@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/starter-template/starter-template.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+     
+      #map {
+        height: 500px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!-- CONTAINER-->
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Estación de tierra</h1>
+        <p class="lead">Comunicación con el avión aéreo no tripulado.</p>
+      </div>
+
+      <div class="page-header">
+        <h1>Posición</h1>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Posición de la antena</h3>
+            </div>
+            <div class="panel-body">
+
+             <div class="row">
+
+              <div class="col-sm-4">        
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Latitud</h3>
+                  </div>
+                  <div class="panel-body">
+                    <input type="text" class="form-control" id="antena_latitud" placeholder="00.00000">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4">        
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Longitud</h3>
+                  </div>
+                  <div class="panel-body">
+                    <input type="text" class="form-control" id="antena_longitud" placeholder="00.00000">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4">        
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Altitud</h3>
+                  </div>
+                  <div class="panel-body">
+                    <input type="text" class="form-control" id="antena_altitud" placeholder="00.00000">
+                  </div>
+                </div>
+              </div>
+
+             </div> <!--ROW-->
+
+            <div class="row">
+              <div class="col-sm-4"></div>
+
+              <div class="col-sm-4">
+                <button type="button" id="antena_boton" class="btn btn-lg btn-danger">Actualizar posición</button>
+              </div>
+
+              <div class="col-sm-4"> </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-sm-4">        
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Latitud</h3>
+                  </div>
+                  <div class="panel-body">
+                    <input type="text" class="form-control" id="antena_latitud_global" placeholder="00.00000" readonly>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4">        
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Longitud</h3>
+                  </div>
+                  <div class="panel-body">
+                    <input type="text" class="form-control" id="antena_longitud_global" placeholder="00.00000" readonly>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4">        
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Altitud</h3>
+                  </div>
+                  <div class="panel-body">
+                    <input type="text" class="form-control" id="antena_altitud_global" placeholder="00.00000" readonly>
+                  </div>
+                </div>
+              </div>
+
+            </div> <!--ROW-->
+            
+          </div> <!-- /.PanelBody -->
+        </div> <!-- /.Panel -->
+      </div><!-- /.col-sm-12 -->
+    </div> <!--ROW-->
+
+        <div class="col-sm-12">
+
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Posición del avión (GPS)</h3>
+            </div>
+            <div class="panel-body">
+              <div class="col-sm-4">        
+                <div class="panel panel-default">
+                 <div class="panel-heading">
+                    <h3 class="panel-title">Latitud</h3>
+                </div>
+                <div class="panel-body">
+              <input type="text" id="avion_latitud" class="form-control" placeholder="Latitud" readonly>
+          </div>
+            </div>
+          </div>
+          <div class="col-sm-4">        
+                <div class="panel panel-default">
+                 <div class="panel-heading">
+                    <h3 class="panel-title">Longitud</h3>
+                </div>
+                <div class="panel-body">
+      <input type="text" class="form-control" id="avion_longitud"placeholder="Longitud" readonly>
+          </div>
+            </div>
+          </div>
+          <div class="col-sm-4">        
+                <div class="panel panel-default">
+                 <div class="panel-heading">
+                    <h3 class="panel-title">Altitud</h3>
+                </div>
+                <div class="panel-body">
+              <input type="text" class="form-control" id="avion_altitud" placeholder="Altitud" readonly>
+          </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">        
+                <div class="panel panel-default">
+                 <div class="panel-heading">
+                    <h3 class="panel-title">Precisión GPS</h3>
+                </div>
+                <div class="panel-body">
+              <input type="text" class="form-control" placeholder="m" readonly>
+          </div>
+            </div>
+          </div>
+          <div class="col-sm-4">        
+                <div class="panel panel-default">
+                 <div class="panel-heading">
+                    <h3 class="panel-title">Velocidad</h3>
+                </div>
+                <div class="panel-body">
+      <input type="text" class="form-control" placeholder="km/h" readonly>
+          </div>
+            </div>
+          </div>
+          <div class="col-sm-4">        
+                <div class="panel panel-default">
+                 <div class="panel-heading">
+                    <h3 class="panel-title">¿Datos válidos?</h3>
+                </div>
+                <div class="panel-body">
+              <input type="text" class="form-control" placeholder="SÍ o NO" readonly>
+          </div>
+            </div>
+          </div>
+
+
+          </div>
+        </div>
+        </div><!-- /.col-sm-12 -->
+
+  <div class="row">
+    <div class="col-sm-12">
+
+    <div id="map"></div>
+
+  </div>
+  </div>
+
+
+
+      <div class="page-header">
+        <h1>Controles</h1>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-6">
+
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Kp elevación</h3>
+            </div>
+            <div class="panel-body">
+              <input type="text" class="form-control" id="kp_elev" placeholder="0.02">             
+            </div>
+          </div>
+
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Kp rotación</h3>
+            </div>
+            <div class="panel-body">
+              <input type="text" class="form-control" id="kp_rot" placeholder="0.02">
+            </div>
+          </div>
+
+        </div><!-- /.col-sm-6 -->
+
+        <div class="col-sm-6">
+
+          <div class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title">Kp elevación</h3>
+            </div>
+            <div class="panel-body">
+              <input type="text" class="form-control" id="elev_indicator" readonly>
+            </div>
+          </div>
+
+          <div class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title">Kp rotación</h3>
+            </div>
+            <div class="panel-body">
+              <input type="text" class="form-control" id="rot_indicator" readonly>
+            </div>
+          </div>
+
+        </div><!-- /.col-sm-6 -->
+        
+      </div>
+
+      <div class="page-header">
+        <h1>Actualizar</h1>
+      </div>
+  
+      <p>
+        <button id="btn_update" type="button" class="btn btn-lg btn-success">Success</button>
+      </p>
+
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/script.js"></script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTPFaHS1hqaJbvXULdryUASPWWlBR0d_Q&signed_in=true&callback=initMap"></script>
+  </body>
+</html>
